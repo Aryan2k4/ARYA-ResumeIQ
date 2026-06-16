@@ -308,4 +308,4 @@ Inspired by **Stripe**, **Linear**, and **Vercel**:
 
 ## 📄 License
 
-MIT © 2025 Aryan Goswami
+MIT © 2026 Aryan Goswami
