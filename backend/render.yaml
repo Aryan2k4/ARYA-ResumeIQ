@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: arya-resumeiq-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./arya_resumeiq.db
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: GROK_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: UPLOAD_DIR
+        value: ./uploads
+    disk:
+      name: uploads
+      mountPath: /opt/render/project/src/uploads
+      sizeGB: 1

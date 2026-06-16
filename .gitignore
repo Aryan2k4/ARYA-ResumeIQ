@@ -1,0 +1,19 @@
+# === Root monorepo .gitignore ===
+
+# Secrets — never commit these
+**/.env
+**/*.env.local
+
+# This checklist file — delete after setup, not for version control
+DELETE_ME.md
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
